@@ -1,0 +1,1 @@
+[{"cashierName":"MARTINA","currencies":[{"symbol":"BGN","amount":1000,"denominations":{"50":10,"10":50}},{"symbol":"EUR","amount":2000,"denominations":{"100":10,"50":20}}],"lastTransactionId":0}]

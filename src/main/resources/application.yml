@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: fibank-cash-desk
+
+fibank:
+    api-key: f9Uie8nNf112hx8s
+    cashiers:
+        file: cashiers.txt
+    transactions:
+        directory: transactions
