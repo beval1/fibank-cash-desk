@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "a8db9210-177f-4470-bc11-c2dc2e556039",
+		"name": "Fibank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14739820",
+		"_collection_link": "https://solar-sunset-157347.postman.co/workspace/New-Team-Workspace~2257db0f-d1ad-43a5-953b-cacdbbbfa17c/collection/14739820-a8db9210-177f-4470-bc11-c2dc2e556039?action=share&source=collection_link&creator=14739820"
+	},
+	"item": [
+		{
+			"name": "Withdraw1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"WITHDRAW\",\n    \"idempotencyId\": \"fc2b2691-5242-4e8a-41aa-fab3d36da373\",\n    \"currency\": \"BGN\",\n    \"denominations\":\n    {\n        \"10\": 5,\n        \"50\": 1\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/cash-operation?cashier=MARTINA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					],
+					"query": [
+						{
+							"key": "cashier",
+							"value": "MARTINA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"WITHDRAW\",\n    \"idempotencyId\": \"fc2b2691-5242-4e8a-41aa-fab3d36da374\",\n    \"currency\": \"EUR\",\n    \"denominations\":\n    {\n        \"50\": 10\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/cash-operation?cashier=MARTINA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					],
+					"query": [
+						{
+							"key": "cashier",
+							"value": "MARTINA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"DEPOSIT\",\n    \"idempotencyId\": \"8d2b86fe-5242-5e8a-82fa-fab3f463da41\",\n    \"currency\": \"BGN\",\n    \"denominations\":\n    {\n        \"10\": 10,\n        \"50\": 10\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/cash-operation?cashier=MARTINA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					],
+					"query": [
+						{
+							"key": "cashier",
+							"value": "MARTINA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"DEPOSIT\",\n    \"idempotencyId\": \"8d2b56fe-5242-5e8a-82fa-fab3f463fa41\",\n    \"currency\": \"EUR\",\n    \"denominations\":\n    {\n        \"20\": 5,\n        \"50\": 2\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/cash-operation?cashier=MARTINA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cash-operation"
+					],
+					"query": [
+						{
+							"key": "cashier",
+							"value": "MARTINA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBalance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/v1/cash-balance?cashier=MARTINA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cash-balance"
+					],
+					"query": [
+						{
+							"key": "cashier",
+							"value": "MARTINA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
